@@ -2,7 +2,33 @@
 
 🚀 **Live Demo:** https://flowcraft-ten.vercel.app/
 
-A production-grade visual flow builder built with **React + TypeScript + Vite**. Construct conditional node graphs, edit them visually, and export clean JSON.
+
+🚀 Overview
+
+This project is a lightweight workflow editor inspired by tools like:
+
+Zapier
+
+n8n
+
+Users can:
+
+Add, drag, and delete nodes
+
+Connect nodes with conditional edges
+
+Mark a starting node
+
+Edit node properties via a sidebar
+
+View a live JSON schema preview
+
+Validate workflow constraints in real-time
+
+Export and import JSON
+
+The goal was to design a system that separates UI representation from data modeling while maintaining a clean and extensible architecture.
+
 
 ## Stack
 
@@ -17,8 +43,8 @@ A production-grade visual flow builder built with **React + TypeScript + Vite**.
 ```bash
 npm install
 npm run dev        # starts at http://localhost:5173
-npm run build      # TypeScript check + Vite build
-npm run typecheck  # tsc --noEmit only
+npm run build      # uses node node_modules/vite/bin/vite.js build
+npm run typecheck  # tsc --noEmit (local only, not used on Vercel)
 ```
 
 ## Project Structure
@@ -113,8 +139,8 @@ interface ExportedEdge {
 **Industrial dark aesthetic** — `JetBrains Mono` for IDs/code, `DM Sans` for UI text. Chosen to match the tool-first nature of flow builders.
 
 ## Deploy
-
 ```bash
-npm run build
+# Build command used for Vercel deployment
+node node_modules/vite/bin/vite.js build
 # dist/ is ready to serve — deploy to Vercel, Netlify, or any static host
 ```
