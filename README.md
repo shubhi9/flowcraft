@@ -1,5 +1,7 @@
 # flowcraft — Visual Flow Builder
 
+🚀 **Live Demo:** https://flowcraft-ten.vercel.app/
+
 A production-grade visual flow builder built with **React + TypeScript + Vite**. Construct conditional node graphs, edit them visually, and export clean JSON.
 
 ## Stack
